@@ -4,6 +4,6 @@ import { validarSchema } from "../middlewares/validarSchema";
 import { loginUsuarioSchema } from "../schemas/usuarioSchemas";
 const auth = Router()
 
-auth.post("/", validarSchema(loginUsuarioSchema), login)
+auth.post("/login", validarSchema(loginUsuarioSchema), login)
 
 export default auth

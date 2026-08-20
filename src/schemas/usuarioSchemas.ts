@@ -7,6 +7,6 @@ export const criarUsuarioSchema = z.object({
 });
 
 export const loginUsuarioSchema = z.object({
-    username: z.string().min(3),
-    password: z.string().min(6)
+    usuario: z.string().min(3),
+    senha: z.string().min(6)
 });
