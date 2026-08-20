@@ -10,3 +10,7 @@ export const loginUsuarioSchema = z.object({
     usuario: z.string().min(3),
     senha: z.string().min(6)
 });
+
+export const criarFeedbackSchema = z.object({
+    feedback: z.string().trim().min(5, "O feedback deve ter no mínimo 5 caracteres")
+});
