@@ -6,6 +6,12 @@ Uma API RESTful inteligente para gestão de feedbacks de clientes, com integraç
 
 Este projeto tem como objetivo não apenas armazenar feedbacks de clientes, mas também enriquecê-los utilizando IA (Google Gemini). Ao enviar um novo feedback, a API automaticamente processa o texto e retorna a classificação de sentimento (Positivo, Negativo ou Neutro), a categoria do assunto (Produto, Atendimento, Bug ou Sugestão) e até mesmo um rascunho de resposta educada para o suporte ao cliente utilizar.
 
+## 🎯 Problemas que Resolvemos (Casos de Uso)
+Em operações de atendimento ao cliente (SAC) de médio e grande porte, a triagem manual de milhares de feedbacks gera lentidão e custos elevados. Esta API resolve problemas críticos como:
+1. **Gargalo na Triagem:** Feedbacks não estruturados demoram a chegar no setor correto. A API categoriza automaticamente (ex: "Bug" vai direto para TI, "Atendimento" vai para o RH).
+2. **Tempo de Resposta Elevado:** Clientes irritados odeiam esperar. A IA gera instantaneamente um rascunho de resposta empático e profissional, reduzindo o tempo de resposta do atendente de minutos para segundos.
+3. **Análise de Clima:** Gestores não conseguem ler todos os reviews manualmente. O sistema classifica o sentimento de forma quantitativa (Positivo, Negativo, Neutro), permitindo a geração de gráficos e métricas sobre a satisfação do cliente em tempo real.
+
 ## 🚀 Funcionalidades
 
 - **Autenticação:** Sistema de login seguro com geração e validação de token JWT.

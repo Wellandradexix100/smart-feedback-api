@@ -23,9 +23,9 @@ model User {
 model FeedBack {
   id         Int    @id @default(autoincrement())
   response   String
+  resposta   String @default("Pra Não quebrar")
   sentimento String
   categoria  String
-  resposta   String
   userId     Int
   user       User   @relation(fields: [userId], references: [id])
 }
