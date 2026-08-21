@@ -26,6 +26,20 @@ Em operações de atendimento ao cliente (SAC) de médio e grande porte, a triag
   - Geração de "draft" (rascunho) de resposta para o cliente.
 - **Segurança e Validação:** Rotas protegidas (Middlewares de Autenticação) e validação estrita de dados de entrada utilizando o Zod.
 
+## 📍 Endpoints da API
+
+**Usuários & Autenticação**
+* `POST /api/` - Cria um novo usuário.
+* `POST /api/login` - Autentica o usuário e retorna o Token JWT.
+* `GET /api/:id` - Retorna os dados do usuário (Requer Token).
+
+**Feedbacks (Requer Token JWT)**
+* `POST /api/feedbacks/` - Cria um feedback e processa a IA (Gemini).
+* `GET /api/feedbacks/` - Lista todos os feedbacks do usuário logado (Aceita filtros na URL: `?humor=POSITIVO&categoria=PRODUTO`).
+* `GET /api/feedbacks/:id` - Retorna os detalhes de um feedback específico.
+* `DELETE /api/feedbacks/:id` - Deleta um feedback.
+
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Node.js** com **Express**
@@ -73,8 +87,6 @@ Em operações de atendimento ao cliente (SAC) de médio e grande porte, a triag
 
 ## 🧪 Próximos Passos (Diferenciais)
 
-- [ ] **Documentação:** Configuração do Swagger/OpenAPI.
-- [ ] **Processamento Assíncrono:** Implementar filas (ex: RabbitMQ ou Redis + BullMQ) para processamento em *background* das chamadas da IA.
-- [ ] **Tratamento de Indisponibilidade:** Rotinas de repetição (*retry*) caso o serviço de LLM esteja fora do ar temporariamente.
-- [ ] **Docker:** Adicionar `docker-compose.yml` para infraestrutura em poucos comandos.
-- [ ] **Testes Automatizados:** Adicionar testes unitários, simulando (mockando) a resposta da API da Inteligência Artificial.
+- [x] **Documentação:** Configuração do Swagger/OpenAPI.
+- [x] **Docker:** Adicionar `docker-compose.yml` para infraestrutura em poucos comandos.
+

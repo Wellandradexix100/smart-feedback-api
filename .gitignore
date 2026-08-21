@@ -8,7 +8,7 @@ yarn-error.log*
 # Node modules
 node_modules/
 
-# Ambiente (Nunca comitar credenciais!)
+# Ambiente
 .env
 .env.local
 .env.development.local
